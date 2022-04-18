@@ -1,0 +1,13 @@
+<h2>Movie edit</h2>
+
+{{#if message}}
+  <b>There was an error editing this movie:</b>
+  <i>{{message}}</i>
+  <b>Please, try again:</b>
+{{/if}}
+
+<form method='POST' action='/movies/{{movie._id}}'>
+  <label for='celebrity-name-input'>Celebrity Name</label>
+  <input id='celebrity-name-input' type='text' name='name' placeholder='Name' value='{{movie.name}}' />
+  <button>Edit Movie</button>
+</form>

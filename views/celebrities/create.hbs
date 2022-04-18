@@ -1,0 +1,17 @@
+<h2>Celebrity create</h2>
+
+{{#if message}}
+  <b>There was an error creating this celebrity:</b>
+  <i>{{message}}</i>
+  <b>Please, try again:</b>
+{{/if}}
+
+<form method='POST' action='/celebrities'>
+  <label for='celebrity-name-input'>Celebrity Name</label>
+  <input id='celebrity-name-input' type='text' name='name' placeholder='Name' />
+  <label for='celebrity-occupation-input'>Celebrity Occupation</label>
+  <input id='celebrity-occupation-input' type='text' name='occupation' placeholder='Occupation' />
+  <label for='celebrity-catchPhrase-input'>Celebrity Catch Phrase</label>
+  <input id='celebrity-catchPhrase-input' type='text' name='catchPhrase' placeholder='Catch Phrase' />
+  <button>Create Celebrity</button>
+</form>

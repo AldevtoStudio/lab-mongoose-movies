@@ -1,0 +1,13 @@
+<h2>Movie create</h2>
+
+{{#if message}}
+  <b>There was an error creating this movie:</b>
+  <i>{{message}}</i>
+  <b>Please, try again:</b>
+{{/if}}
+
+<form method='POST' action='/movies'>
+  <label for='movie-name-input'>Movie Name</label>
+  <input id='movie-name-input' type='text' name='name' placeholder='Name' />
+  <button>Create Movie</button>
+</form>

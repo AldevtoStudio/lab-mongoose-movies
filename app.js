@@ -29,10 +29,14 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(favicon(path.join(__dirname, 'public/images/favicon.ico')));
 
-// Mount base router on app, after setting up other middleware
+// Mount routers on app, after setting up other middlewares
 const baseRouter = require('./routes');
+const celebritiesRouter = require('./routes/celebrities');
+const moviesRouter = require('./routes/movies');
 
 app.use('/', baseRouter);
+app.use('/celebrities', celebritiesRouter);
+app.use('/movies', moviesRouter);
 
 // Catch 404 and render a not-found.hbs template
 app.use((req, res, next) => {
